@@ -19,7 +19,44 @@ export default class SideMenu extends Component {
       animated: true
     });
   }
-  
+  navigateScence() {
+
+  }
+  navigateScence0() {
+    this._toggleDrawer();
+    this.props.navigator.push({
+      title: 'Home',
+      screen: 'screen.Home',
+    });
+  }
+  navigateScence1() {
+    this._toggleDrawer();
+    this.props.navigator.push({
+      title: 'Database',
+      screen: 'screen.Database',
+    });
+  }
+  navigateScence2() {
+    this._toggleDrawer();
+    this.props.navigator.push({
+      title: 'MyCustomer',
+      screen: 'screen.MyCustomer',
+    });
+  }
+  navigateScence3() {
+    this._toggleDrawer();
+    this.props.navigator.push({
+      title: 'HistoryScene',
+      screen: 'screen.HistoryScene',
+    });
+  }
+  navigateScence4() {
+    this._toggleDrawer();
+    this.props.navigator.push({
+      title: 'Checklist',
+      screen: 'screen.Checklist',
+    });
+  }
   render() {
     return (
       <ScrollView style={styles.drawerContainer}>
@@ -39,7 +76,7 @@ export default class SideMenu extends Component {
           </Image>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('home')}
+            onPress={() => this.navigateScence0('home')}
           >
             <Image
               style={styles.navigateIcon}
@@ -50,7 +87,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('database')}
+            onPress={() => this.navigateScence1('database')}
           >
             <Image
               style={styles.navigateIcon}
@@ -61,7 +98,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('myCustomer')}
+            onPress={() => this.navigateScence2()}
           >
             <Image
               style={styles.navigateIcon}
@@ -72,7 +109,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('history')}
+            onPress={() => this.navigateScence3()}
           >
             <Image
               style={styles.navigateIcon}
@@ -83,7 +120,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('motivation')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={styles.navigateIcon}
@@ -95,7 +132,7 @@ export default class SideMenu extends Component {
 
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('target')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={styles.navigateIcon}
@@ -106,7 +143,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.navigateButton}
-            onPress={() => this.navigateScence('checklist')}
+            onPress={() => this.navigateScence4()}
           >
             <Image
               style={styles.navigateIcon}
@@ -117,7 +154,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.navigateButton, { backgroundColor: '#6e7469' }]}
-            onPress={() => this.navigateScence('socialRanking')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={[styles.navigateIcon, { tintColor: '#eee' }]}
@@ -128,7 +165,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.navigateButton, { backgroundColor: '#6e7469' }]}
-            onPress={() => this.navigateScence('socialBuy')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={[styles.navigateIcon, { tintColor: '#eee' }]}
@@ -139,7 +176,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.navigateButton, { backgroundColor: '#6e7469' }]}
-            onPress={() => this.navigateScence('socialSell')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={[styles.navigateIcon, { tintColor: '#eee' }]}
@@ -150,7 +187,7 @@ export default class SideMenu extends Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.logoutButton}
-            onPress={() => this.navigateScence('logout')}
+            onPress={() => this.navigateScence()}
           >
             <Image
               style={styles.logoutIcon}
