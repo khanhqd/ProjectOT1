@@ -7,9 +7,11 @@ import MyCustomer from './MyCustomer';
 import CustomerDetail from './CustomerDetail';
 import HistoryScene from './HistoryScene';
 import Checklist from './Checklist';
+import LoginForm from './LoginForm';
 // register all screens of the app (including internal ones)
 export function registerScreens() {
   Navigation.registerComponent('screen.SideMenu', () => SideMenu);
+  Navigation.registerComponent('screen.LoginForm', () => LoginForm);
   Navigation.registerComponent('screen.Home', () => Home);
   Navigation.registerComponent('screen.Database', () => Database);
   Navigation.registerComponent('screen.MyCustomer', () => MyCustomer);
